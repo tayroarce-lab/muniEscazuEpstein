@@ -39,12 +39,45 @@
     </div>
 </header>
 
+<!-- 🔹 SECCIÓN DE REPORTE -->
+<section id="seccionReporte">
+    <h2>Reporte de Problema</h2>
 
+    <form id="formReporte">
 
+        <div>
+            <label for="tipoProblema">Seleccione el tipo de problema</label>
+            <select id="tipoProblema" required>
+                <option value="">-- Seleccione una opción --</option>
+                <option value="Hueco en carretera">Hueco en carretera</option>
+                <option value="Alumbrado público dañado">Alumbrado público dañado</option>
+                <option value="Basura acumulada">Basura acumulada</option>
+                <option value="Fuga de agua">Fuga de agua</option>
+                <option value="Problema de alcantarillado">Problema de alcantarillado</option>
+                <option value="Señalización dañada">Señalización dañada</option>
+                <option value="Otro">Otro</option>
+            </select>
+        </div>
+        
+        <div>
+             <label for="Especifique el problema">Especifique el problema</label>
+             <input type="text" id="especifiqueProblema" placeholder="¿Que sucede?">
+        </div>
 
+        <div>
+            <label for="ubicacion">Ubicación</label>
+            <input type="text" id="ubicacion" placeholder="Ej: Barrio San Rafael" required>
+        </div>
 
+        <div>
+            <button type="button" id="btnEnviar">Registrar Reporte</button>
+        </div>
+
+    </form>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
 <script type="module" src="../js/index.js"></script>
+
 </body>
 </html>
