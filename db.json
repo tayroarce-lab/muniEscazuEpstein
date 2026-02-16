@@ -25,7 +25,13 @@
       "tipo": "Alcantarillado",
       "descripcion": "Descripcion 1",
       "ubicacion": "Ubicacion 1",
-      "estado": "En proceso"
+      "estado": "Resuelto"
+    },
+    {
+      "id": "2f37",
+      "tipoProblema": "Alumbrado público dañado",
+      "ubicacion": "Barrial",
+      "fecha": "2026-02-16T21:10:52.007Z"
     }
   ]
 }
