@@ -1,15 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos Viales --- Admin</title>
+    <title>Proyectos de Caminos - Escazú</title>
     <link rel="stylesheet" href="../../styles/admin-dashboard-css/pryt-vial.css">
 </head>
+
 <body>
-    
 
+    <header class="barra-superior">
+        <div id="encabezado" class="caja-centrada">
+            <div class="area-logo">
+                <img src="logo-municipal.png" alt="Logo de Escazú" class="imagen-logo">
+                <h1>Arreglos en Carreteras</h1>
+            </div>
+            <nav>
+                <a href="admin.html"><button class="boton-volver">Volver al Inicio</button></a>
+            </nav>
+        </div>
+    </header>
 
-    <script  type="module" src="../../js/admin-dashboard-js/pryt-vial.js"></script>
+    <main class="contenido-principal">
+
+        <section class="bloque-informativo tarjeta">
+            <div class="texto-explicativo">
+                <h2>¿Cómo van los caminos en Escazú?</h2>
+                <p>
+                    Aquí podés ver cómo estamos trabajando para mejorar las calles, puentes y aceras del cantón.
+                    Queremos que sepás en qué se invierten tus impuestos y cómo avanza cada obra.
+                </p>
+            </div>
+            <div class="foto-portada">
+                <img src="../../img/calle nueva.jpg" alt="Foto de calle nueva" class="imagen-ajustada">
+            </div>
+        </section>
+
+        <section class="explicacion-trabajo">
+            <h2 class="titulo-grupo">Detalles de la construcción</h2>
+            <div class="cuadritos-info">
+                <article class="tarjeta-pequena">
+                    <div class="espacio-foto">
+                        <img src="../../img/ASFALTO-COMO-SE-HACE.png" alt="Foto de asfalto">
+                    </div>
+                    <h3>El asfalto que usamos</h3>
+                    <p>Es un material muy fuerte que aguanta los aguaceros y el paso de camiones pesados.</p>
+                </article>
+
+                <article class="tarjeta-pequena">
+                    <div class="espacio-foto">
+                        <img src="../../img/acera.jpg" alt="Foto de acera">
+                    </div>
+                    <h3>Caminar con seguridad</h3>
+                    <p>Hacemos aceras con rampas para que todos, incluidos adultos mayores, puedan pasar bien.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="cuadro-de-alerta">
+            <div class="icono-aviso">⚠️</div>
+            <div class="texto-alerta">
+                <h3>¡Atención conductores!</h3>
+                <p>Hay calles cerradas en Los Laureles por arreglos en las tuberías. Busquen rutas alternas.</p>
+            </div>
+        </section>
+
+        <!-- ZONA SOLO PARA ADMINISTRADORES (Se activaría con JS) -->
+        <section id="zona-admin" class="tarjeta panel-administrativo">
+            <div class="bloque-admin">
+                <h2>Panel de Administración (Solo Admins)</h2>
+                <p class="instrucciones">Desde aquí podés agregar obras nuevas o gestionar las que ya existen.</p>
+
+                <form class="formulario-admin">
+                    <div class="grupo-campo">
+                        <label>Nombre de la obra</label>
+                        <input type="text" placeholder="Ej: Bacheo en Calle Central" class="entrada-texto">
+                    </div>
+                    <div class="grupo-campo">
+                        <label>Ubicación exacta</label>
+                        <input type="text" placeholder="Barrio, distrito..." class="entrada-texto">
+                    </div>
+                    <div class="grupo-campo">
+                        <label>Enlace de la foto (URL)</label>
+                        <input type="text" placeholder="https://ejemplo.com/foto.jpg" class="entrada-texto">
+                    </div>
+                    <div class="grupo-campo">
+                        <label>Detalles de la obra</label>
+                        <textarea placeholder="Explicación breve para los vecinos..." class="entrada-area"></textarea>
+                    </div>
+                    <button type="submit" class="boton-accion verde">Crear Proyecto Nuevo</button>
+                </form>
+
+                <div class="separador"></div>
+
+                <h3>Gestión de trabajos existentes</h3>
+                <div class="tabla-gestion">
+                    <!-- Esto es un ejemplo de cómo se vería la lista para editar/borrar -->
+                    <div class="fila-gestion">
+                        <span class="nombre-obra">Mejora de Carpeta Asfáltica</span>
+                        <div class="botones-gestion">
+                            <button class="boton-accion azul">Editar</button>
+                            <button class="boton-accion rojo">Borrar</button>
+                        </div>
+                    </div>
+                    <div class="fila-gestion">
+                        <span class="nombre-obra">Nuevo Puente Peatonal</span>
+                        <div class="botones-gestion">
+                            <button class="boton-accion azul">Editar</button>
+                            <button class="boton-accion rojo">Borrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="seccion-proyectos" class="lista-obras tarjeta">
+            <div class="cabecera-lista">
+                <h2>Lista de trabajos actuales</h2>
+                <p>Estos son los arreglos que se están haciendo justo ahora:</p>
+            </div>
+<!-- contenedor de informacion sobre los proyectos -->
+            <div id="contenedor-para-js">
+                <p>Cargando la información...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="../../js/admin-dashboard-js/pryt-vial.js"></script>
 </body>
+
 </html>
