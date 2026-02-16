@@ -1,3 +1,22 @@
-{"usuarios":[
-
-]}
+{
+  "usuarios": [
+    {
+      "id": "4124",
+      "nombre": "Tayro Arce",
+      "email": "tayroarce@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "6d03",
+      "nombre": "Jassir Briceño",
+      "email": "tayroarce@icloud.com",
+      "password": "1234"
+    },
+    {
+      "id": "79b4",
+      "nombre": "Barry Vega",
+      "email": "barryeg12@gmail.com",
+      "password": "1234"
+    }
+  ]
+}
