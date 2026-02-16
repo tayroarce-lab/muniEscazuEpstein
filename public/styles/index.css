@@ -1,0 +1,135 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background: linear-gradient(90deg, #003f5c, #005f73);
+    padding: 18px 60px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#titulo h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* =========================
+   NAV PRINCIPAL
+========================= */
+#navegacion {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    position: relative;
+}
+
+/* Links principales */
+#navegacion > a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Línea animada */
+#navegacion > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #94d2bd;
+    transition: 0.3s ease;
+}
+
+#navegacion > a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   SUBMENÚ GENERAL
+========================= */
+#navegacion ul {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    background: white;
+    border-radius: 12px;
+    min-width: 240px;
+    padding: 12px 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    transform: translateY(15px);
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Centrar links internos */
+#navegacion ul li a {
+    display: block;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+#navegacion ul li a:hover {
+    background: #e0fbfc;
+    color: #005f73;
+}
+
+/* =========================
+   POSICIONAMIENTO EXACTO
+========================= */
+
+/* Primer submenu (Tramites y Servicios) */
+#navegacion > ul:nth-of-type(1) {
+    left: 63%; /* antes era 50% */
+    transform: translateX(-50%) translateY(15px);
+}
+
+/* Segundo submenu (Transparencia) */
+#navegacion > ul:nth-of-type(2) {
+    right: -10%;
+}
+
+/* Mostrar cuando se pasa el mouse sobre su link */
+#navegacion > a:nth-of-type(4):hover + ul,
+#navegacion > ul:nth-of-type(1):hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Segundo */
+#navegacion > a:nth-of-type(5):hover + ul,
+#navegacion > ul:nth-of-type(2):hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
