@@ -1,4 +1,61 @@
 {
+<<<<<<< HEAD
   "usuarios": [],
   "reportes": []
+=======
+  "usuarios": [
+    {
+      "id": "4124",
+      "nombre": "Tayro Arce",
+      "email": "tayroarce@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "6d03",
+      "nombre": "Jassir Briceño",
+      "email": "tayroarce@icloud.com",
+      "password": "1234"
+    },
+    {
+      "id": "79b4",
+      "nombre": "Barry Vega",
+      "email": "barryeg12@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "reportes": [
+    {
+      "id": "1",
+      "tipo": "Alcantarillado",
+      "descripcion": "Descripcion 1",
+      "ubicacion": "Ubicacion 1",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "2f37",
+      "tipoProblema": "Alumbrado público dañado",
+      "ubicacion": "Barrial",
+      "fecha": "2026-02-16T21:10:52.007Z",
+      "tipo": "undefined",
+      "descripcion": "undefined",
+      "estado": "Resuelto"
+    }
+  ],
+  "proyectosViales": [
+    {
+      "id": "1",
+      "nombre": "Calle Principal",
+      "descripcion": "Reparación de la calle principal",
+      "estado": "Pendiente"
+    }
+  ],
+  "servicios": [
+    {
+      "id": "1",
+      "nombre": "Recolección de basura",
+      "descripcion": "Recolección de basura",
+      "estado": "Bueno"
+    }
+  ]
+>>>>>>> ce31e1470df6d5dbe03208513fcb3b34cc8b42f4
 }

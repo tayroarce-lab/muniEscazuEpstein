@@ -1,4 +1,4 @@
-import { postUsuarios } from "../server/serviceUsers.js";
+import { postUsuarios } from "../../server/serviceUsers.js";
 
 const nombre = document.getElementById("nombre");
 const email = document.getElementById("email");

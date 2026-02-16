@@ -1,4 +1,4 @@
-import { getUsuarios } from "../server/serviceUsers.js";
+import { getUsuarios } from "../../server/serviceUsers.js";
 
 const email = document.getElementById("email");
 const password = document.getElementById("password");

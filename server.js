@@ -10,7 +10,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'pages/index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'pages/admin-dashboard-html/admin.html'));
 });
 
 const PORT = 3000;
