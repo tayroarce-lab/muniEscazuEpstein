@@ -1,4 +1,27 @@
 {
+<<<<<<< HEAD
   "usuarios": [],
   "reportes": []
+=======
+  "usuarios": [
+    {
+      "id": "4124",
+      "nombre": "Tayro Arce",
+      "email": "tayroarce@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "6d03",
+      "nombre": "Jassir Briceño",
+      "email": "tayroarce@icloud.com",
+      "password": "1234"
+    },
+    {
+      "id": "79b4",
+      "nombre": "Barry Vega",
+      "email": "barryeg12@gmail.com",
+      "password": "1234"
+    }
+  ]
+>>>>>>> 3e9af2f81b410d79cafee25cef1359cfc2941bd1
 }

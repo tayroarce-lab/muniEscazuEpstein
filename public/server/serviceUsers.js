@@ -6,29 +6,29 @@ async function getUsuarios() {
         const respuestaServidor = await fetch(URL);
         return await respuestaServidor.json();
     } catch (error) {
-        console.error("Error al obtener los productos", error);
+        console.error("Error al obtener los usuarios", error);
     }
 }
 
 // POST
-async function postProductos(producto) {
+async function postUsuarios(usuario) {
     try {
         const respuesta = await fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(producto)
+            body: JSON.stringify(usuario)
         });
 
         return await respuesta.json();
     } catch (error) {
-        console.error("Error al crear el producto", error);
+        console.error("Error al crear el usuario", error);
     }
 }
 
 // DELETE
-async function deleteProductos(id) {
+async function deleteUsuarios(id) {
     try {
         const respuesta = await fetch(`${URL}/${id}`, {
             method: "DELETE"
@@ -36,25 +36,25 @@ async function deleteProductos(id) {
 
         return await respuesta.json();
     } catch (error) {
-        console.error("Error al eliminar el producto", error);
+        console.error("Error al eliminar el usuario", error);
     }
 }
 
 // PUT
-async function putProductos(id, producto) {
+async function putUsuarios(id, usuario) {
     try {
         const respuesta = await fetch(`${URL}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(producto)
+            body: JSON.stringify(usuario)
         });
 
         return await respuesta.json();
     } catch (error) {
-        console.error("Error al actualizar el producto", error);
+        console.error("Error al actualizar el usuario", error);
     }
 }
 
-export { getProductos, postProductos, deleteProductos, putProductos };
+export { getUsuarios, postUsuarios, deleteUsuarios, putUsuarios };
