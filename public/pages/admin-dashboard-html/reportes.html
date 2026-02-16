@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes --- Admin</title>
+    <link rel="stylesheet" href="../../styles/admin-dashboard-css/reportes.css">
+</head>
+<body>
+    
+    <header>
+    <div id="titulo">
+        <img src="" alt="">
+        <h1>DashBoard</h1>
+
+        <nav>
+            <a href="../pages/index.html"><button>Inicio</button></a>
+        </nav>
+
+    </div>
+</header>
+
+
+
+<div class="dashboard">
+
+
+    
+<!-- esta vara es pura decoracion legalmente, me dio hueva ponerle alguna funcion xd -->
+    <aside class="sidebar">
+        <h2>Panel Admin</h2>
+        <ul>
+            <li>Gestion Reportes</li>
+
+    </aside>
+<!-- aqui deberiade llegar los reportes y mostrarse -->
+    <main class="contenido">
+        <h1>Reportes Recibidos</h1>
+
+        <div class="tabla-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaReportes">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</div>
+    
+
+
+
+    <script type="module" src="../../js/admin-dashboard-js/srvcs-publicos.js"></script>
+</body>
+</html>
