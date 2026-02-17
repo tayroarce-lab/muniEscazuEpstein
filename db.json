@@ -58,11 +58,29 @@
       "descripcion": "jjdsadaljs"
     }
   ],
-  "servicios": [
+  "serviciosPublicos": [
     {
       "id": "1",
       "nombre": "Recolección de basura",
       "descripcion": "Recolección de basura",
+      "estado": "Bueno"
+    },
+    {
+      "id": "2",
+      "nombre": "Agua potable",
+      "descripcion": "Agua potable",
+      "estado": "Bueno"
+    },
+    {
+      "id": "3",
+      "nombre": "Alumbrado público",
+      "descripcion": "Alumbrado público",
+      "estado": "Bueno"
+    },
+    {
+      "id": "4",
+      "nombre": "Parques y jardines",
+      "descripcion": "Parques y jardines",
       "estado": "Bueno"
     }
   ]

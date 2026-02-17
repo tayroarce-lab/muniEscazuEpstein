@@ -1,7 +1,7 @@
-const URL = "http://localhost:3001/servicios";
+const URL = "http://localhost:3001/serviciosPublicos";
 
 // GET
-async function getServicios() {
+async function getServiciosPublicos() {
     try {
         const respuestaServidor = await fetch(URL);
         return await respuestaServidor.json();
@@ -11,7 +11,7 @@ async function getServicios() {
 }
 
 // POST
-async function postServicios(servicio) {
+async function postServiciosPublicos(servicio) {
     try {
         const respuesta = await fetch(URL, {
             method: "POST",
@@ -28,7 +28,7 @@ async function postServicios(servicio) {
 }
 
 // DELETE
-async function deleteServicios(id) {
+async function deleteServiciosPublicos(id) {
     try {
         const respuesta = await fetch(`${URL}/${id}`, {
             method: "DELETE"
@@ -41,7 +41,7 @@ async function deleteServicios(id) {
 }
 
 // PUT
-async function putServicios(id, servicio) {
+async function putServiciosPublicos(id, servicio) {
     try {
         const respuesta = await fetch(`${URL}/${id}`, {
             method: "PATCH",
@@ -57,4 +57,4 @@ async function putServicios(id, servicio) {
     }
 }
 
-export { getServicios, postServicios, deleteServicios, putServicios };
+export { getServiciosPublicos, postServiciosPublicos, deleteServiciosPublicos, putServiciosPublicos };
