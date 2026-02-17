@@ -1,14 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Publicos --- Admin</title>
+    <title>Servicios Públicos - Municipalidad de Escazú</title>
 </head>
+
 <body>
-    
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Municipalidad de Escazú - Servicios</title>
+        <link rel="stylesheet" href="../../styles/admin-dashboard-css/srvcs-publicos.css">
+    </head>
+
+    <body>
+
+        <header id="cabecera">
+            <h1 class="titulo-principal">Municipalidad de Escazú</h1>
+            <p class="lema">"Comprometidos con el bienestar y el progreso de nuestra comunidad."</p>
+            <a href="admin.html"><button class="boton-volver">Volver al Inicio</button></a>
+            <button type="button" id="boton-sesion" class="btn-interactivo">
+                <a href="../login.html">Iniciar Sesión</a>
+            </button>
+        </header>
+
+        <hr class="linea-separadora">
+
+        <main id="cuerpo-pagina">
+
+            <section id="introduccion">
+                <h2 class="titulo-seccion">Información de Servicios Públicos</h2>
+                <p class="texto-informativo">A continuación, se detallan los servicios que la Municipalidad ofrece para
+                    mejorar la calidad de vida en el cantón:</p>
+            </section>
+
+            <section id="lista-servicios">
+
+                <div class="tarjeta-servicio" id="servicio-basura">
+                    <h3 class="nombre-servicio">1. Gestión de Residuos</h3>
+                    <ul class="lista-detalles">
+                        <li><strong>Recolección Normal:</strong> Pasa dos veces por semana en todos los barrios.</li>
+                        <li><strong>Reciclaje:</strong> Recolección de plástico y cartón los miércoles.</li>
+                        <li><strong>Basura Grande:</strong> Muebles y electrodomésticos el primer lunes del mes.</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta-servicio" id="servicio-obras">
+                    <h3 class="nombre-servicio">2. Arreglo de Calles y Parques</h3>
+                    <p>Nos encargamos de que los espacios públicos estén en buen estado:</p>
+                    <ul class="lista-detalles">
+                        <li>Reparación de baches y calles nuevas.</li>
+                        <li>Limpieza de alcantarillas para evitar inundaciones.</li>
+                        <li>Cuidado de plantas y juegos en los parques.</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta-servicio" id="servicio-seguridad">
+                    <h3 class="nombre-servicio">3. Seguridad Municipal</h3>
+                    <p>Vigilancia para la tranquilidad de su familia:</p>
+                    <ul class="lista-detalles">
+                        <li>Patrullas recorriendo los barrios todo el día.</li>
+                        <li>Cámaras de vigilancia en las calles principales.</li>
+                        <li>Atención rápida a reportes de vecinos.</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <hr class="linea-separadora">
+
+            <section id="contacto">
+                <h2 class="titulo-seccion">Trámites y Consultas</h2>
+                <p>Horarios de atención en nuestras oficinas:</p>
+
+                <table class="tabla-horarios">
+                    <thead>
+                        <tr>
+                            <th>Días</th>
+                            <th>Horas de Atención</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunes a Viernes</td>
+                            <td>8:00 de la mañana a 4:00 de la tarde</td>
+                        </tr>
+                        <tr>
+                            <td>Sábados</td>
+                            <td>8:00 de la mañana a 12:00 mediodía</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+            <!-- aqui se añadiran las cartas que son llenadas en el formulario por el admin -->
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta">
+                    <div class="informacion-tarjeta">
+                    </div>
+                </div>
+            </div>
+<!-- este es el formulario que podra llenar el admin -->
+            <section id="panel-admin" class="seccion-privada">
+                <div class="caja-formulario">
+                    <h2 class="titulo-admin">Panel de Gestión: Agregar Nuevo Servicio</h2>
+                    <p>Complete los datos para publicar una nueva tarjeta de servicio público.</p>
+
+                    <form id="formulario-servicio">
+                        <div class="grupo-entrada">
+                            <label for="titulo-servicio">Nombre del Servicio</label>
+                            <input type="text" id="titulo-servicio" placeholder="Ej: Acueducto Municipal" required>
+                        </div>
+
+                        <div class="grupo-entrada">
+                            <label for="descripcion-servicio">Descripción Corta</label>
+                            <textarea id="descripcion-servicio" placeholder="Describa brevemente el servicio..."
+                                required></textarea>
+                        </div>
+
+                        <button type="button" class="boton-enviar">Publicar Servicio</button>
+                    </form>
+                </div>
+            </section>
+        </main>
 
 
-    <script type="module" src="../../js/admin-dashboard-js/srvcs-publicos.js"></script>
-</body>
-</html>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="module" src="../../js/admin-dashboard-js/srvcs-publicos.js"></script>
+    </body>
+
+    </html>

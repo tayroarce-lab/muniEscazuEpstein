@@ -13,7 +13,7 @@
     <header class="barra-superior">
         <div id="encabezado" class="caja-centrada">
             <div class="area-logo">
-                <img src="" alt="Logo de Escazú" class="imagen-logo">
+                <img src="logo-municipal.png" alt="Logo de Escazú" class="imagen-logo">
                 <h1>Arreglos en Carreteras</h1>
             </div>
             <nav>
@@ -95,20 +95,21 @@
 
                 <h3>Gestión de trabajos existentes</h3>
                 <div class="tabla-gestion">
-                    <table id="tablaViales">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Descripción</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbodyViales">
-                            
-                        </tbody>
-                    </table>
+                    <!-- Esto es un ejemplo de cómo se vería la lista para editar/borrar -->
+                    <div class="fila-gestion">
+                        <span class="nombre-obra">Mejora de Carpeta Asfáltica</span>
+                        <div class="botones-gestion">
+                            <button class="boton-accion azul">Editar</button>
+                            <button class="boton-accion rojo">Borrar</button>
+                        </div>
+                    </div>
+                    <div class="fila-gestion">
+                        <span class="nombre-obra">Nuevo Puente Peatonal</span>
+                        <div class="botones-gestion">
+                            <button class="boton-accion azul">Editar</button>
+                            <button class="boton-accion rojo">Borrar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -118,6 +119,7 @@
                 <h2>Lista de trabajos actuales</h2>
                 <p>Estos son los arreglos que se están haciendo justo ahora:</p>
             </div>
+<!-- contenedor de informacion sobre los proyectos -->
             <div id="contenedor-para-js">
                 <p>Cargando la información...</p>
             </div>

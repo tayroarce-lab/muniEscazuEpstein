@@ -8,6 +8,13 @@ body {
     margin: 0;
 }
 
+
+.acciones-encabezado {
+    display: flex;
+    gap: 15px; /* Esto controla la separación exacta entre los dos botones */
+    align-items: center;
+}
+
 /* Barra de arriba */
 .barra-superior {
     background-color: #003366;
@@ -259,4 +266,26 @@ body {
     .verde {
         grid-column: span 1;
     }
+}
+
+/* Estilo base del botón */
+.btn-interactivo {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background-color: #005f73; /* Color por defecto (Iniciar) */
+    color: white;
+}
+
+/* Clase extra que JS puede poner o quitar */
+.sesion-activa {
+    background-color: #ae2012; /* Color diferente para "Cerrar Sesión" */
+}
+
+.btn-interactivo:hover {
+    filter: brightness(1.2);
 }
