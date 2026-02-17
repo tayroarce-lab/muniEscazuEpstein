@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "usuarios": [],
-  "reportes": []
-=======
   "usuarios": [
     {
       "id": "4124",
@@ -47,6 +43,19 @@
       "nombre": "Calle Principal",
       "descripcion": "Reparación de la calle principal",
       "estado": "Pendiente"
+    },
+    {
+      "id": "2",
+      "nombre": "Calle Secundaria",
+      "descripcion": "Reparación de la calle secundaria",
+      "estado": "En progreso"
+    },
+    {
+      "id": "3c7e",
+      "nombre": "fasfnd",
+      "ubicacion": "adapdoadslñbjbk",
+      "foto": "a jajcnsaasln",
+      "descripcion": "jjdsadaljs"
     }
   ],
   "servicios": [
@@ -57,5 +66,4 @@
       "estado": "Bueno"
     }
   ]
->>>>>>> ce31e1470df6d5dbe03208513fcb3b34cc8b42f4
 }

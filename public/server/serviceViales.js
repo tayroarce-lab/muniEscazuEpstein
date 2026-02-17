@@ -1,4 +1,4 @@
-const URL = "http://localhost:3001/viales";
+const URL = "http://localhost:3001/proyectosViales";
 
 // GET
 async function getViales() {
@@ -41,7 +41,7 @@ async function deleteViales(id) {
 }
 
 // PUT
-async function putViales(id, vial) {
+async function patchViales(id, vial) {
     try {
         const respuesta = await fetch(`${URL}/${id}`, {
             method: "PATCH",
@@ -57,4 +57,4 @@ async function putViales(id, vial) {
     }
 }
 
-export { getViales, postViales, deleteViales, putViales };
+export { getViales, postViales, deleteViales, patchViales };

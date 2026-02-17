@@ -13,7 +13,7 @@
     <header class="barra-superior">
         <div id="encabezado" class="caja-centrada">
             <div class="area-logo">
-                <img src="logo-municipal.png" alt="Logo de Escazú" class="imagen-logo">
+                <img src="" alt="Logo de Escazú" class="imagen-logo">
                 <h1>Arreglos en Carreteras</h1>
             </div>
             <nav>
@@ -72,45 +72,43 @@
                 <h2>Panel de Administración (Solo Admins)</h2>
                 <p class="instrucciones">Desde aquí podés agregar obras nuevas o gestionar las que ya existen.</p>
 
-                <form class="formulario-admin">
-                    <div class="grupo-campo">
-                        <label>Nombre de la obra</label>
-                        <input type="text" placeholder="Ej: Bacheo en Calle Central" class="entrada-texto">
-                    </div>
-                    <div class="grupo-campo">
-                        <label>Ubicación exacta</label>
-                        <input type="text" placeholder="Barrio, distrito..." class="entrada-texto">
-                    </div>
-                    <div class="grupo-campo">
-                        <label>Enlace de la foto (URL)</label>
-                        <input type="text" placeholder="https://ejemplo.com/foto.jpg" class="entrada-texto">
-                    </div>
-                    <div class="grupo-campo">
-                        <label>Detalles de la obra</label>
-                        <textarea placeholder="Explicación breve para los vecinos..." class="entrada-area"></textarea>
-                    </div>
-                    <button type="submit" class="boton-accion verde">Crear Proyecto Nuevo</button>
-                </form>
+                <div class="grupo-campo">
+                    <label>Nombre de la obra</label>
+                    <input type="text" placeholder="Ej: Bacheo en Calle Central" id="nombreVial">
+                </div>
+                <div class="grupo-campo">
+                    <label>Ubicación exacta</label>
+                    <input type="text" placeholder="Barrio, distrito..." id="ubicacionVial">
+                </div>
+                <div class="grupo-campo">
+                    <label>Enlace de la foto (URL)</label>
+                    <input type="text" placeholder="https://ejemplo.com/foto.jpg" id="fotoVial">
+                </div>
+                <div class="grupo-campo">
+                    <label>Detalles de la obra</label>
+                    <textarea placeholder="Explicación breve para los vecinos..." id="descripcionVial"></textarea>
+                </div>
+                <button type="button" id="botonAgregarVial">Crear Proyecto Nuevo</button>
+                
 
                 <div class="separador"></div>
 
                 <h3>Gestión de trabajos existentes</h3>
                 <div class="tabla-gestion">
-                    <!-- Esto es un ejemplo de cómo se vería la lista para editar/borrar -->
-                    <div class="fila-gestion">
-                        <span class="nombre-obra">Mejora de Carpeta Asfáltica</span>
-                        <div class="botones-gestion">
-                            <button class="boton-accion azul">Editar</button>
-                            <button class="boton-accion rojo">Borrar</button>
-                        </div>
-                    </div>
-                    <div class="fila-gestion">
-                        <span class="nombre-obra">Nuevo Puente Peatonal</span>
-                        <div class="botones-gestion">
-                            <button class="boton-accion azul">Editar</button>
-                            <button class="boton-accion rojo">Borrar</button>
-                        </div>
-                    </div>
+                    <table id="tablaViales">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyViales">
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -120,7 +118,6 @@
                 <h2>Lista de trabajos actuales</h2>
                 <p>Estos son los arreglos que se están haciendo justo ahora:</p>
             </div>
-<!-- contenedor de informacion sobre los proyectos -->
             <div id="contenedor-para-js">
                 <p>Cargando la información...</p>
             </div>
@@ -128,6 +125,7 @@
 
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="../../js/admin-dashboard-js/pryt-vial.js"></script>
 </body>
 
