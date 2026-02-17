@@ -17,6 +17,12 @@
       "nombre": "Barry Vega",
       "email": "barryeg12@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "02b3",
+      "nombre": "Tayro Arce",
+      "email": "papulince@grasa.com",
+      "password": "12345678"
     }
   ],
   "reportes": [
@@ -32,9 +38,9 @@
       "tipoProblema": "Alumbrado público dañado",
       "ubicacion": "Barrial",
       "fecha": "2026-02-16T21:10:52.007Z",
-      "tipo": "undefined",
-      "descripcion": "undefined",
-      "estado": "Resuelto"
+      "tipo": "Alumbrado público",
+      "descripcion": "Lámpara quebrada",
+      "estado": "Pendiente"
     }
   ],
   "proyectosViales": [
@@ -49,13 +55,6 @@
       "nombre": "Calle Secundaria",
       "descripcion": "Reparación de la calle secundaria",
       "estado": "En progreso"
-    },
-    {
-      "id": "3c7e",
-      "nombre": "fasfnd",
-      "ubicacion": "adapdoadslñbjbk",
-      "foto": "a jajcnsaasln",
-      "descripcion": "jjdsadaljs"
     }
   ],
   "serviciosPublicos": [

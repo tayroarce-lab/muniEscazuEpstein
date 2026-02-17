@@ -5,19 +5,58 @@ const password = document.getElementById("password");
 const btnEnviar = document.getElementById("btnEnviar");
 
 btnEnviar.addEventListener("click", async function() {
-    const usuario = {
-        email: email.value,
-        password: password.value
+    const credentials = {
+        email: email.value.trim(),
+        password: password.value.trim()
     };
-    let usuarios = await getUsuarios();
 
-    verificarUsuario();
-    async function verificarUsuario() {
-    for (let index = 0; index < usuarios.length; index++) {
-
-    if (usuarios[index].email === usuario.email && usuarios[index].password === usuario.password) {
-        alert("Usuario encontrado");
-        window.location.href = "index.html";
-        break;
+    if (!credentials.email || !credentials.password) {
+        Swal.fire({
+            icon: "warning",
+            title: "Campos vacíos",
+            text: "Por favor complete todos los campos"
+        });
+        return;
     }
-}}});
+
+    try {
+        const usuarios = await getUsuarios();
+
+        if (!usuarios) {
+            Swal.fire({
+                icon: "error",
+                title: "Error de conexión",
+                text: "No se pudo obtener la lista de usuarios. Verifique que el servidor esté corriendo."
+            });
+            return;
+        }
+
+        const userFound = usuarios.find(u => u.email === credentials.email && u.password === credentials.password);
+
+        if (userFound) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Bienvenido',
+                text: 'Inicio de sesión exitoso',
+                timer: 1500,
+                showConfirmButton: false
+            }).then(() => {
+                sessionStorage.setItem("user", JSON.stringify(userFound)); // Save session
+                window.location.href = "index.html"; 
+            });
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Credenciales incorrectas",
+                text: "El correo o la contraseña no coinciden"
+            });
+        }
+    } catch (error) {
+        console.error("Error en login:", error);
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Ocurrió un error inesperado"
+        });
+    }
+});

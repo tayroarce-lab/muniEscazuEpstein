@@ -1,29 +1,38 @@
-/* Fuente sencilla y bonita */
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #f1c40f;
+    --background-color: #f4f7f6;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --text-muted: #666666;
+    --border-radius: 12px;
+    --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    --transition-speed: 0.3s;
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+}
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
+    line-height: 1.6;
 }
 
-
-.acciones-encabezado {
-    display: flex;
-    gap: 15px; /* Esto controla la separación exacta entre los dos botones */
-    align-items: center;
-}
-
-/* Barra de arriba */
+/* Encabezado */
 .barra-superior {
-    background-color: #003366;
+    background: linear-gradient(135deg, var(--primary-color), #004494);
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .caja-centrada {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -31,52 +40,93 @@ body {
     padding: 0 20px;
 }
 
+.area-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.area-logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
 .imagen-logo {
-    height: 50px;
+    height: 60px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 .boton-volver {
-    background-color: #f1c40f;
+    background-color: var(--secondary-color);
+    color: #333;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
     cursor: pointer;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-/* Tarjetas y bloques */
+.boton-volver:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Layout Principal */
 .contenido-principal {
-    max-width: 1000px;
-    margin: 30px auto;
+    max-width: 1200px;
+    margin: 40px auto;
     padding: 0 20px;
+    display: grid;
+    gap: 30px;
 }
 
+/* Estilos Generales de Tarjeta */
 .tarjeta {
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 25px;
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed);
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* Sección Intro */
+.bloque-informativo {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
 }
 
-/* Ajuste de fotos */
-.imagen-ajustada {
-    width: 100%;
-    border-radius: 10px;
+.texto-explicativo h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
 .foto-portada {
     flex: 1;
+    overflow: hidden;
+    border-radius: var(--border-radius);
 }
 
-.texto-explicativo {
-    flex: 1;
+.imagen-ajustada {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
 }
 
-/* Cuadritos de abajo */
+.foto-portada:hover .imagen-ajustada {
+    transform: scale(1.05);
+}
+
+/* Tarjetas Informativas Pequeñas */
 .cuadritos-info {
     display: flex;
     gap: 20px;
@@ -84,208 +134,212 @@ body {
 
 .tarjeta-pequena {
     background: white;
-    flex: 1;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
+    transition: all var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-pequena:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
 .espacio-foto {
-    height: 150px;
-    background-color: #ddd;
+    height: 200px;
+    background-color: #eee;
+    overflow: hidden;
 }
 
 .espacio-foto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s;
 }
 
-.tarjeta-pequena h3,
+.tarjeta-pequena:hover .espacio-foto img {
+    transform: scale(1.1);
+}
+
+.tarjeta-pequena h3 {
+    padding: 15px 20px 5px;
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
 .tarjeta-pequena p {
-    padding: 10px 15px;
+    padding: 0 20px 20px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 /* Alertas */
 .cuadro-de-alerta {
-    background-color: #ffdada;
-    border-left: 8px solid #ff4d4d;
-    padding: 15px;
+    background-color: #fff5f5;
+    border-left: 6px solid var(--danger-color);
+    padding: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
-    border-radius: 10px;
-    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .icono-aviso {
-    font-size: 30px;
+    font-size: 35px;
 }
 
-/* Espacio para el JS */
-#contenedor-para-js {
-    width: 100%;
-    min-height: 150px;
-    border: 3px dashed #bbb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fafafa;
-}
-
-/* Estilos para el Panel de Administración */
-.panel-administrativo {
-    border-top: 5px solid #003366;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.bloque-admin {
-    width: 100%;
-}
-
-.instrucciones {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.formulario-admin {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 30px;
+/* Panel de Administración */
+#zona-admin {
+    border-top: 5px solid var(--primary-color);
 }
 
 .grupo-campo {
-    display: flex;
-    flex-direction: column;
-}
-
-.grupo-campo:nth-child(4) {
-    grid-column: span 2;
+    margin-bottom: 20px;
 }
 
 .grupo-campo label {
+    display: block;
+    margin-bottom: 8px;
     font-weight: 600;
-    margin-bottom: 5px;
-    font-size: 14px;
+    color: #444;
 }
 
-.entrada-texto,
-.entrada-area {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.entrada-area {
-    height: 80px;
-    resize: none;
-}
-
-.separador {
-    height: 1px;
-    background-color: #eee;
-    margin: 20px 0;
-}
-
-.tabla-gestion {
-    background-color: #f9f9f9;
+.grupo-campo input,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color var(--transition-speed);
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+#botonAgregarVial {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color var(--transition-speed), transform 0.2s;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+#botonAgregarVial:hover {
+    background-color: #004494;
+    transform: translateY(-2px);
+}
+
+/* Lista de Gestión */
+.tabla-gestion {
+    margin-top: 20px;
 }
 
 .fila-gestion {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    background: #fcfcfc;
+    padding: 15px;
     border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.fila-gestion:hover {
+    background: #f0f4ff;
+}
+
+.fila-gestion:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .fila-gestion:last-child {
     border-bottom: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
-.nombre-obra {
-    font-weight: 600;
+.botones-gestion {
+    display: flex;
+    gap: 10px;
 }
 
-/* Botones de colores */
 .boton-accion {
-    padding: 8px 15px;
+    padding: 8px 16px;
     border: none;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 6px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
 }
 
-.verde {
-    background-color: #27ae60;
-    color: white;
-    grid-column: span 2;
-    padding: 12px;
-}
-
-.verde:hover {
-    background-color: #219150;
+.boton-accion:hover {
+    opacity: 0.9;
 }
 
 .azul {
-    background-color: #2980b9;
+    background-color: var(--primary-color);
     color: white;
-}
-
-.azul:hover {
-    background-color: #2471a3;
 }
 
 .rojo {
-    background-color: #c0392b;
+    background-color: var(--danger-color);
     color: white;
-    margin-left: 5px;
 }
 
-.rojo:hover {
-    background-color: #a93226;
-}
-
-/* Si se ve en celular */
-@media (max-width: 700px) {
-
-    .tarjeta,
-    .cuadritos-info,
-    .formulario-admin {
-        flex-direction: column;
-        grid-template-columns: 1fr;
-    }
-
-    .grupo-campo:nth-child(4),
-    .verde {
-        grid-column: span 1;
-    }
-}
-
-/* Estilo base del botón */
-.btn-interactivo {
-    padding: 10px 20px;
+/* Contenedor Público JS */
+#contenedor-para-js {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    /* Resetear estilos anteriores */
     border: none;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    background-color: #005f73; /* Color por defecto (Iniciar) */
-    color: white;
+    background: transparent;
+    padding: 5px;
 }
 
-/* Clase extra que JS puede poner o quitar */
-.sesion-activa {
-    background-color: #ae2012; /* Color diferente para "Cerrar Sesión" */
-}
+/* Responsive */
+@media (max-width: 768px) {
+    .bloque-informativo,
+    .cuadritos-info {
+        flex-direction: column;
+    }
 
-.btn-interactivo:hover {
-    filter: brightness(1.2);
+    .tarjeta-pequena {
+        width: 100% !important; /* Override inline styles if any */
+        margin: 0 0 20px 0 !important;
+        display: block !important;
+    }
+
+    .fila-gestion {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .botones-gestion {
+        width: 100%;
+        justify-content: flex-end;
+    }
 }
