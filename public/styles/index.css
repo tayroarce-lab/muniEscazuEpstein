@@ -133,3 +133,224 @@ header {
     visibility: visible;
     transform: translateY(0);
 }
+
+/* =========================
+   CARRUSEL
+========================= */
+.carrusel-section {
+    margin-bottom: 60px;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.carousel-caption {
+    bottom: 30%;
+}
+
+.carousel-caption h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+}
+
+/* =========================
+   INFORMACIÓN MUNICIPAL
+========================= */
+.info-muni {
+    padding: 80px 10%;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    text-align: center;
+}
+
+.info-muni h2 {
+    font-size: 36px;
+    color: #003f5c;
+    margin-bottom: 25px;
+}
+
+.info-muni p {
+    max-width: 800px;
+    margin: auto;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+/* =========================
+   CARDS ELEGANTES
+========================= */
+.cards-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-muni {
+    background: white;
+    padding: 35px 25px;
+    width: 280px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease;
+}
+
+.card-muni:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 95, 115, 0.2);
+}
+
+.card-muni h3 {
+    color: #005f73;
+    margin-bottom: 15px;
+}
+
+.card-muni p {
+    font-size: 15px;
+    color: #666;
+}
+
+
+/* =========================
+   SECCIÓN REPORTE
+========================= */
+#seccionReporte {
+    padding: 80px 10%;
+    background: linear-gradient(to right, #f1f5f9, #e6f2f5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+#seccionReporte h2 {
+    font-size: 34px;
+    color: #003f5c;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#seccionReporte h2::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #005f73;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 4px;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+#formReporte {
+    background: white;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+#formReporte:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 70px rgba(0, 95, 115, 0.15);
+}
+
+/* Contenedor de cada campo */
+#formReporte div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+#formReporte label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Inputs y Select */
+#formReporte input,
+#formReporte select {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.3s ease;
+    outline: none;
+}
+
+/* Focus elegante */
+#formReporte input:focus,
+#formReporte select:focus {
+    border-color: #005f73;
+    box-shadow: 0 0 0 3px rgba(0, 95, 115, 0.15);
+}
+
+/* =========================
+   BOTÓN
+========================= */
+#btnEnviar {
+    background: linear-gradient(90deg, #003f5c, #005f73);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+#btnEnviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 95, 115, 0.3);
+}
+
+#btnEnviar:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   FIX Z-INDEX DROPDOWN
+========================= */
+
+/* El header debe estar por encima de todo */
+header {
+    position: relative;
+    z-index: 2000;
+}
+
+/* Aseguramos que el nav y sus dropdowns estén arriba */
+#navegacion {
+    position: relative;
+    z-index: 2100;
+}
+
+#navegacion ul {
+    z-index: 2200;
+}
+
+/* Bajamos el carrusel */
+.carrusel-section {
+    position: relative;
+    z-index: 1;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+    z-index: 1;
+}
