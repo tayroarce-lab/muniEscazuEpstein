@@ -10,18 +10,21 @@
 
 <body>
 
-    <header class="barra-superior">
-        <div id="encabezado" class="caja-centrada">
-            <div class="area-logo">
-                <img src="logo-municipal.png" alt="Logo de Escazú" class="imagen-logo">
-                <h1>Arreglos en Carreteras</h1>
-            </div>
-            <nav>
-                <a href="admin.html"><button class="boton-volver">Volver al Inicio</button></a>
-            </nav>
+<header class="barra-superior">
+    <div id="encabezado" class="caja-centrada">
+        <div class="area-logo">
+            <img src="../../img/descarga.png" alt="Logo de Escazú" class="imagen-logo">
+            <h1>Arreglos en Carreteras</h1>
         </div>
-    </header>
 
+        <div class="acciones-encabezado">
+            <a href="admin.html"><button class="boton-volver">Volver al Inicio</button></a>
+            <button type="button" id="boton-sesion" class="btn-interactivo">
+                Iniciar Sesión
+            </button>
+        </div>
+    </div>
+</header>
     <main class="contenido-principal">
 
         <section class="bloque-informativo tarjeta">
@@ -96,21 +99,12 @@
 
                 <h3>Gestión de trabajos existentes</h3>
                 <div class="tabla-gestion">
-                    <!-- Esto es un ejemplo de cómo se vería la lista para editar/borrar -->
-                    <div class="fila-gestion">
-                        <span class="nombre-obra">Mejora de Carpeta Asfáltica</span>
-                        <div class="botones-gestion">
-                            <button class="boton-accion azul">Editar</button>
-                            <button class="boton-accion rojo">Borrar</button>
-                        </div>
-                    </div>
-                    <div class="fila-gestion">
-                        <span class="nombre-obra">Nuevo Puente Peatonal</span>
-                        <div class="botones-gestion">
-                            <button class="boton-accion azul">Editar</button>
-                            <button class="boton-accion rojo">Borrar</button>
-                        </div>
-                    </div>
+                    <!-- contenedor de informacion sobre los proyectos -->
+                    <!--  <button class="boton-accion azul">Editar</button> -->
+                    <!-- <button class="boton-accion rojo">Borrar</button> -->
+                </div>
+                <div class="fila-gestion">
+
                 </div>
             </div>
         </section>
@@ -120,14 +114,14 @@
                 <h2>Lista de trabajos actuales</h2>
                 <p>Estos son los arreglos que se están haciendo justo ahora:</p>
             </div>
-<!-- contenedor de informacion sobre los proyectos -->
+            <!-- contenedor de informacion sobre los proyectos -->
             <div id="contenedor-para-js">
                 <p>Cargando la información...</p>
             </div>
         </section>
 
     </main>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="../../js/admin-dashboard-js/pryt-vial.js"></script>
 </body>

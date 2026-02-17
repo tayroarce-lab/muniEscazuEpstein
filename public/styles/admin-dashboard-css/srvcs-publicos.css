@@ -1,0 +1,193 @@
+/* Estilo base del botón */
+.btn-interactivo {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background-color: #005f73; /* Color por defecto (Iniciar) */
+    color: white;
+}
+
+/* Clase extra que JS puede poner o quitar */
+.sesion-activa {
+    background-color: #ae2012; /* Color diferente para "Cerrar Sesión" */
+}
+
+.btn-interactivo:hover {
+    filter: brightness(1.2);
+}
+
+/* Configuración General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    color: #333;
+}
+
+#cabecera {
+    background-color: #003366;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.titulo-principal { margin: 0; font-size: 2.5rem; }
+.lema { font-style: italic; opacity: 0.9; }
+
+/* Estilo para el botón de Iniciar Sesión */
+.btn-interactivo {
+    background-color: #005f73; /* Azul verdoso institucional */
+    color: white;
+    padding: 10px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto cuando pasas el mouse */
+.btn-interactivo:hover {
+    background-color: #0a9396; /* Un azul más claro y vibrante */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ESTADO: Cerrar Sesión (Cuando JS le ponga esta clase) */
+.btn-interactivo.sesion-activa {
+    background-color: #ae2012; /* Rojo oscuro para indicar salida */
+    border-color: #9b2226;
+}
+
+.btn-interactivo.sesion-activa:hover {
+    background-color: #ca6702; /* Cambia a un tono naranja/rojizo al pasar el mouse */
+}
+
+/* Efecto al hacer clic */
+.btn-interactivo:active {
+    transform: scale(0.98);
+}
+
+/* PANEL DE ADMIN (Oculto por defecto) */
+.seccion-privada {
+    display: none; /* JS debe cambiar esto a 'block' para mostrarlo */
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.caja-formulario {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #27ae60;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.grupo-entrada { margin-bottom: 15px; }
+.grupo-entrada label { display: block; font-weight: bold; margin-bottom: 5px; }
+
+.grupo-entrada input, 
+.grupo-entrada textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Evita que se salga del cuadro */
+}
+
+.boton-enviar {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* TARJETAS DE SERVICIO */
+#lista-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-servicio {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.tarjeta-servicio:hover { transform: translateY(-5px); }
+.nombre-servicio { color: #003366; border-bottom: 2px solid #f1c40f; padding-bottom: 5px; }
+
+/* TABLA */
+.tabla-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+}
+
+.tabla-horarios th { background: #003366; color: white; padding: 12px; }
+.tabla-horarios td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+
+/* CUADRO EMERGENCIA */
+.cuadro-emergencia {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Estilo para el botón de volver */
+.boton-volver {
+    background-color: #f1c40f; /* Un amarillo llamativo pero formal */
+    color: #003366;           /* Texto azul oscuro para buen contraste */
+    padding: 10px 20px;
+    border: 2px solid #d4ac0d; /* Un borde un poco más oscuro que el fondo */
+    border-radius: 8px;        /* Esquinas redondeadas */
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Para que los cambios sean suaves */
+    text-transform: uppercase; /* Letras en mayúscula para que resalte */
+}
+
+/* Efecto cuando pasas el mouse por encima */
+.boton-volver:hover {
+    background-color: #003366; /* Cambia a azul oscuro */
+    color: white;              /* Texto a blanco */
+    border-color: #002244;
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Efecto cuando lo presionas */
+.boton-volver:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Quitamos el subrayado del enlace que envuelve al botón */
+a {
+    text-decoration: none;
+}
