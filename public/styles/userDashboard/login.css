@@ -12,40 +12,45 @@ body {
     min-height: 100vh;
     background: 
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-        url('../img/escazu-bg.jpg');
+        url('../../img/iglesia-san-antonio-de-padua-escazc3ba-foto-de-panoramio.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
+    align-items: center; 
 }
 
 
-/* =========================
-   HEADER
-========================= */
 header {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    padding: 18px 60px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    background: transparent;
-    box-shadow: none;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
 }
+
 
     
 
 
 
 #titulo {
+    width: 100%;
+    max-width: 1200px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    margin-left: -22%; 
 }
 
 #titulo img {
-    width: 50px;
+    width: 200px;
+    margin-right: 20px; 
 }
+
 
 #titulo h1 {
     color: white;
@@ -69,12 +74,12 @@ nav button:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* =========================
-   CONTENEDOR LOGIN
-========================= */
+
 #contenedor-login,
 #contenedor-registro {
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(25px);
     padding: 55px 45px;

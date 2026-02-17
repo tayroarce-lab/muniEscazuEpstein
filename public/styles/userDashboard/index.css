@@ -15,7 +15,7 @@ body {
    HEADER
 ========================= */
 header {
-    background: linear-gradient(90deg, #003f5c, #005f73);
+    background: linear-gradient(90deg, #3a0070, #e4e4e4);
     padding: 18px 60px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
@@ -26,6 +26,10 @@ header {
     justify-content: space-between;
 }
 
+#titulo img {
+    width: 200px;
+    height: 150px;
+}
 #titulo h1 {
     color: white;
     font-size: 24px;
@@ -44,7 +48,7 @@ header {
 
 /* Links principales */
 #navegacion > a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 500;
     padding: 10px 15px;

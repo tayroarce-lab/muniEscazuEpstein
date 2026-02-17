@@ -7,7 +7,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s ease;
-    background-color: #005f73; /* Color por defecto (Iniciar) */
+    background-color: #660073; /* Color por defecto (Iniciar) */
     color: white;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 #cabecera {
-    background-color: #003366;
+    background-color: #860092;
     color: white;
     padding: 40px 20px;
     text-align: center;
@@ -41,7 +41,7 @@ body {
 
 /* Estilo para el botón de Iniciar Sesión */
 .btn-interactivo {
-    background-color: #005f73; /* Azul verdoso institucional */
+    background-color: #c483e2; /* Azul verdoso institucional */
     color: white;
     padding: 10px 22px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -56,7 +56,7 @@ body {
 
 /* Efecto cuando pasas el mouse */
 .btn-interactivo:hover {
-    background-color: #0a9396; /* Un azul más claro y vibrante */
+    background-color: #960a8f; /* Un azul más claro y vibrante */
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -134,7 +134,7 @@ body {
 }
 
 .tarjeta-servicio:hover { transform: translateY(-5px); }
-.nombre-servicio { color: #003366; border-bottom: 2px solid #f1c40f; padding-bottom: 5px; }
+.nombre-servicio { color: #4e0066; border-bottom: 2px solid #73018a; padding-bottom: 5px; }
 
 /* TABLA */
 .tabla-horarios {
@@ -144,7 +144,7 @@ body {
     background: white;
 }
 
-.tabla-horarios th { background: #003366; color: white; padding: 12px; }
+.tabla-horarios th { background: #630066; color: white; padding: 12px; }
 .tabla-horarios td { padding: 12px; border: 1px solid #ddd; text-align: center; }
 
 /* CUADRO EMERGENCIA */
@@ -159,10 +159,10 @@ body {
 
 /* Estilo para el botón de volver */
 .boton-volver {
-    background-color: #f1c40f; /* Un amarillo llamativo pero formal */
-    color: #003366;           /* Texto azul oscuro para buen contraste */
+    background-color: #ae00ff; /* Un amarillo llamativo pero formal */
+    color: #ffffff;           /* Texto azul oscuro para buen contraste */
     padding: 10px 20px;
-    border: 2px solid #d4ac0d; /* Un borde un poco más oscuro que el fondo */
+    border: 2px solid #ae00ff; /* Un borde un poco más oscuro que el fondo */
     border-radius: 8px;        /* Esquinas redondeadas */
     font-family: 'Segoe UI', sans-serif;
     font-weight: bold;
@@ -174,9 +174,9 @@ body {
 
 /* Efecto cuando pasas el mouse por encima */
 .boton-volver:hover {
-    background-color: #003366; /* Cambia a azul oscuro */
+    background-color: #7b008b; /* Cambia a azul oscuro */
     color: white;              /* Texto a blanco */
-    border-color: #002244;
+    border-color: #a70090;
     transform: translateY(-2px); /* Pequeño salto hacia arriba */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
 }

@@ -9,7 +9,12 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url('../../img/iglesia-san-antonio-de-padua-escazc3ba-foto-de-panoramio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -32,8 +37,8 @@ header {
 }
 
 #titulo img {
-    width: 55px;
-    height: 55px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
 }
 
@@ -111,12 +116,10 @@ nav button:hover {
     left: -100%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(
-        120deg,
-        rgba(255,255,255,0.2) 0%,
-        rgba(255,255,255,0.05) 40%,
-        transparent 60%
-    );
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.05) 40%,
+            transparent 60%);
     transform: rotate(25deg);
     transition: 0.6s;
 }

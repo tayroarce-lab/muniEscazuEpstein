@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #0056b3;
+    --primary-color: #000000;
     --secondary-color: #f1c40f;
     --background-color: #f4f7f6;
     --card-background: #ffffff;
@@ -54,7 +54,7 @@ body {
 }
 
 .imagen-logo {
-    height: 60px;
+    height: 100px;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 

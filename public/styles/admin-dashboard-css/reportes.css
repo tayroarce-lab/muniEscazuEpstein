@@ -27,7 +27,11 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+#titulo img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
 #titulo h1 {
     color: white;
     font-size: 22px;
