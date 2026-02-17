@@ -20,6 +20,11 @@
     }
   ],
   "reportes": [
-   
+    {
+      "id": "70ce",
+      "tipoProblema": "Hueco en carretera",
+      "ubicacion": "erjsk",
+      "fecha": "2026-02-16T21:09:17.262Z"
+    }
   ]
 }
