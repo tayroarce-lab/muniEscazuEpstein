@@ -17,7 +17,7 @@ btnEnviar.addEventListener("click", async function() {
 
     if (usuarios[index].email === usuario.email && usuarios[index].password === usuario.password) {
         alert("Usuario encontrado");
-        window.location.href = "../pages/index.html";
+        window.location.href = "index.html";
         break;
     }
 }}});
