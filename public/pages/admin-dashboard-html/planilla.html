@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Planillas Municipales</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background:#f5f5f5; }
+    h1 { text-align: center; }
+    form, table { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(125, 12, 135, 0.1); }
+    form { margin-bottom: 20px; }
+    label { display:block; margin-top: 10px; }
+    input { width:100%; padding:8px; margin-top:4px; }
+    button { margin-top: 10px; padding:8px 12px; border:none; border-radius:5px; cursor:pointer; }
+    .btn-add { background:#893bb3; color:#fff; }
+    .btn-update { background:#7d1db5; color:#fff; }
+    .btn-delete { background:#6e28b9; color:#fff; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { padding:8px; border-bottom:1px solid #ddd; text-align:left; }
+    th { background:#7a13a3; color:#fff; }
+    tr:hover { background:#f1f1f1; }
+  </style>
+</head>
+<body>
+  <h1>Sistema de Planillas - Municipalidad</h1>
+
+  <form id="formPlanilla">
+    <input type="hidden" id="editIndex" />
+    <label>Nombre del Empleado
+      <input type="text" id="nombre" required />
+    </label>
+    <label>Puesto
+      <input type="text" id="puesto" required />
+    </label>
+    <label>Departamento
+      <input type="text" id="departamento" required />
+    </label>
+    <label>Salario Base
+      <input type="number" id="salarioBase" required />
+    </label>
+    <label>Horas Extra (₡ por horas)
+      <input type="number" id="horasExtra" value="0" />
+    </label>
+    <label>Rebajos (₡)
+      <input type="number" id="rebajos" value="0" />
+    </label>
+    <button type="submit" class="btn-add">Guardar Registro</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Empleo</th>
+        <th>Puesto</th>
+        <th>Departamento</th>
+        <th>Salario Base</th>
+        <th>Horas Extra</th>
+        <th>Rebajos</th>
+        <th>Salario Neto</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tablaPlanillas"></tbody>
+  </table>
+
+</body>
+</html>
