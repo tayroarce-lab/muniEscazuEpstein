@@ -3,12 +3,6 @@
     {
       "id": "4124",
       "nombre": "Tayro Arce",
-      "email": "tayroarce@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "4124",
-      "nombre": "Tayro Arce",
       "email": "tayroarce@escazu.com",
       "password": "1234",
       "role": "admin"
@@ -17,8 +11,8 @@
       "id": "6d03",
       "nombre": "Jassir Briceño",
       "email": "tayroarce@icloud.com",
-      "password": "1234"
-      
+      "password": "1234",
+      "rol": "admin"
     },
     {
       "id": "79b4",
@@ -37,6 +31,13 @@
       "nombre": "Tayro Arce",
       "email": "tarcebfwd@gmail.comw",
       "password": "123452352535"
+    },
+    {
+      "id": "c9ed",
+      "nombre": "Mangekyo",
+      "email": "sharingan@uchiha.com",
+      "rol": "admin",
+      "password": "1234"
     }
   ],
   "reportes": [
