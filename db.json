@@ -7,10 +7,18 @@
       "password": "1234"
     },
     {
+      "id": "4124",
+      "nombre": "Tayro Arce",
+      "email": "tayroarce@escazu.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
       "id": "6d03",
       "nombre": "Jassir Briceño",
       "email": "tayroarce@icloud.com",
       "password": "1234"
+      
     },
     {
       "id": "79b4",
@@ -23,20 +31,19 @@
       "nombre": "Tayro Arce",
       "email": "papulince@grasa.com",
       "password": "12345678"
+    },
+    {
+      "id": "ef6f",
+      "nombre": "Tayro Arce",
+      "email": "tarcebfwd@gmail.comw",
+      "password": "123452352535"
     }
   ],
   "reportes": [
     {
-      "id": "1",
-      "tipo": "Alcantarillado",
-      "descripcion": "Descripcion 1",
-      "ubicacion": "Ubicacion 1",
-      "estado": "Pendiente"
-    },
-    {
       "id": "2f37",
       "tipoProblema": "Alumbrado público dañado",
-      "ubicacion": "Barrial",
+      "ubicacion": "Mangekyo Sharingan",
       "fecha": "2026-02-16T21:10:52.007Z",
       "tipo": "Alumbrado público",
       "descripcion": "Lámpara quebrada",
@@ -44,12 +51,6 @@
     }
   ],
   "proyectosViales": [
-    {
-      "id": "1",
-      "nombre": "Calle Principal",
-      "descripcion": "Reparación de la calle principal",
-      "estado": "Pendiente"
-    },
     {
       "id": "2",
       "nombre": "Calle Secundaria",
@@ -73,8 +74,8 @@
     {
       "id": "3",
       "nombre": "Alumbrado público",
-      "descripcion": "Alumbrado público",
-      "estado": "Bueno"
+      "descripcion": "Alumbrado publico",
+      "estado": "En Mantenimiento"
     },
     {
       "id": "4",

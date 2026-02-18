@@ -10,7 +10,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.redirect('/pages/userDashboard/index.html');
+    res.redirect('/pages/userDashboard/login.html');
 });
 
 const PORT = 3000;

@@ -34,6 +34,9 @@ btnEnviar.addEventListener("click", async function() {
         const userFound = usuarios.find(u => u.email === credentials.email && u.password === credentials.password);
 
         if (userFound) {
+            // Guardar sesión antes de redirigir
+            sessionStorage.setItem("user", JSON.stringify(userFound));
+
             Swal.fire({
                 icon: 'success',
                 title: 'Bienvenido',
@@ -41,8 +44,12 @@ btnEnviar.addEventListener("click", async function() {
                 timer: 1500,
                 showConfirmButton: false
             }).then(() => {
-                sessionStorage.setItem("user", JSON.stringify(userFound)); // Save session
-                window.location.href = "index.html"; 
+                // Redirigir según el rol
+                if (userFound.role === 'admin') {
+                    window.location.href = '../admin-dashboard-html/admin.html';
+                } else {
+                    window.location.href = 'index.html';
+                }
             });
         } else {
             Swal.fire({
