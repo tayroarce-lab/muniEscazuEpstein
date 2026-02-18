@@ -12,34 +12,42 @@
 
 <body>
 
-    <header>
-        <div id="titulo">
-            <img src="../../img/logo_municipalidad_escazu_black_outline_thick.png" alt="Logo Municipalidad">
-            <h1>Municipalidad de Escazú</h1>
+    <header class="encabezado-sitio">
+        <div class="contenedor-navegacion">
+            <div class="logo-municipalidad">
+                <img src="../../img/logo_municipalidad_escazu_black_outline_thick.png" alt="Logo Municipalidad">
+                <h1>Municipalidad de <span>Escazú</span></h1>
+            </div>
 
-            <nav id="navegacion">
-                <a href="login.html">Login</a>
-                <a href="registro.html">Registro</a>
-                <a href="#">Contacto</a>
-                <a href="#">Tramites y Servicios</a>
-                <ul>
-                    <li><a href="../admin-dashboard-html/srvcs-publicos.html">Servicios Publicos</a></li>
-                    <li><a href="#">Tramites en linea</a></li>
-                    <li><a href="#">Agenda Citas</a></li>
-                    <li><a href="#">Matricula</a></li>
-                    <li><a href="#">Por departamento</a></li>
-                    <li><a href="#">Geo Portal</a></li>
-                    <li><a href="#">Intermediación de empleo</a></li>
-                </ul>
-                <a href="../transparencia.html">Transparencia</a>
-                <ul>
-                    <li><a href="#">Documentos</a></li>
-                    <li><a href="#">índices de Gestión</a></li>
-                    <li><a href="#">Procesos Licitarios - SICOP</a></li>
-                    <li><a href="#">Proveeduría</a></li>
-                    <li><a href="#">Recursos Humanos y Materiales</a></li>
-                    <li><a href="../admin-dashboard-html/pryt-viales.html">Proyectos Viales</a></li>
-                </ul>
+            <nav id="menu-principal">
+                <a href="#" class="enlace-menu">Contacto</a>
+
+                <div class="opcion-con-desplegable">
+                    <a href="#" class="enlace-menu flecha-abajo">Servicios y Trámites</a>
+                    <ul class="lista-desplegable">
+                        <li><a href="#">Trámites en línea</a></li>
+                        <li><a href="#">Agenda Citas</a></li>
+                        <li><a href="#">Matrícula</a></li>
+                        <li><a href="#">Por departamento</a></li>
+                        <li><a href="#">Geo Portal</a></li>
+                        <li><a href="#">Intermediación de empleo</a></li>
+                    </ul>
+                </div>
+
+                <div class="opcion-con-desplegable">
+                    <a href="../transparencia.html" class="enlace-menu flecha-abajo">Transparencia</a>
+                    <ul class="lista-desplegable">
+                        <li><a href="#">Documentos</a></li>
+                        <li><a href="#">Índices de Gestión</a></li>
+                        <li><a href="#">Procesos Licitarios - SICOP</a></li>
+                        <li><a href="#">Proveeduría</a></li>
+                        <li><a href="#">Recursos Humanos y Materiales</a></li>
+                    </ul>
+                </div>
+
+                <div class="botones-usuario">
+                    <a href="#" id="botonCerrarSesion" class="boton-salir">Cerrar Sesión</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -62,8 +70,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img src="../../img/Untitled (1).jpg" class="d-block w-100"
-                        alt="Servicios">
+                    <img src="../../img/Untitled (1).jpg" class="d-block w-100" alt="Servicios">
                     <div class="carousel-caption">
                         <h2>Servicios Públicos Eficientes</h2>
                         <p>Gestión moderna en infraestructura, ambiente y comunidad.</p>
@@ -92,8 +99,8 @@
         </div>
     </section>
 
-    <!--  INFORMACIÓN MUNICIPAL -->
-    <section class="info-muni">
+    <!-- INFORMACIÓN MUNICIPAL -->
+    <section class="bloque-institucional aparecer">
         <div class="container">
             <h2>Municipalidad de Escazú</h2>
             <p>
@@ -104,18 +111,18 @@
                 el fortalecimiento de la transparencia y la participación ciudadana.
             </p>
 
-            <div class="cards-info">
-                <div class="card-muni">
+            <div class="tarjetas-info">
+                <div class="tarjeta-muni">
                     <h3>Misión</h3>
                     <p>Brindar servicios municipales de calidad con transparencia y eficiencia.</p>
                 </div>
 
-                <div class="card-muni">
+                <div class="tarjeta-muni">
                     <h3>Visión</h3>
                     <p>Ser un gobierno local innovador, sostenible y cercano a la ciudadanía.</p>
                 </div>
 
-                <div class="card-muni">
+                <div class="tarjeta-muni">
                     <h3>Valores</h3>
                     <p>Compromiso, responsabilidad, transparencia y servicio a la comunidad.</p>
                 </div>
@@ -123,11 +130,101 @@
         </div>
     </section>
 
+    <!-- SECCIÓN DE PROYECTOS VIALES -->
+    <section id="trabajosViales" class="seccion-dashboard aparecer color-morado">
+        <div class="container">
+            <h2 class="titulo-principal-seccion">Arreglos en Carreteras</h2>
+
+            <div class="bloque-explicativo">
+                <div class="resumen-texto">
+                    <h3>¿Cómo van los caminos en Escazú?</h3>
+                    <p>
+                        Aquí podés ver cómo estamos trabajando para mejorar las calles, puentes y aceras del cantón.
+                        Queremos que sepás en qué se invierten tus impuestos y cómo avanza cada obra.
+                    </p>
+                </div>
+                <div class="recuadro-foto">
+                    <img src="../../img/calle nueva.jpg" alt="Foto de calle nueva" class="imagen-bien-ajustada">
+                </div>
+            </div>
+
+            <div class="cuadros-informativos">
+                <article class="ficha-tecnica">
+                    <img src="../../img/ASFALTO-COMO-SE-HACE.png" alt="Foto de asfalto">
+                    <h4>El asfalto que usamos</h4>
+                    <p>Es un material muy fuerte que aguanta los aguaceros y el paso de camiones pesados.</p>
+                </article>
+
+                <article class="ficha-tecnica">
+                    <img src="../../img/acera.jpg" alt="Foto de acera">
+                    <h4>Caminar con seguridad</h4>
+                    <p>Hacemos aceras con rampas para que todos, incluidos adultos mayores, puedan pasar bien.</p>
+                </article>
+            </div>
+
+            <div class="banda-alerta">
+                <span class="triangulo-aviso">⚠️</span>
+                <div class="mensaje-alerta">
+                    <h4>¡Atención conductores!</h4>
+                    <p>Hay calles cerradas en Los Laureles por arreglos en las tuberías. Busquen rutas alternas.</p>
+                </div>
+            </div>
+
+            <div class="listado-proyectos">
+                <h3>Trabajos en progreso</h3>
+                <div id="lista-obras" class="cuadricula-proyectos">
+                    <p class="cargando-datos">Cargando información de proyectos...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS PÚBLICOS -->
+    <section id="serviciosEscazu" class="seccion-dashboard aparecer color-morado">
+        <div class="container">
+            <h2 class="titulo-principal-seccion">Servicios Públicos</h2>
+
+            <div class="explicacion-servicios">
+                <p>La Municipalidad ofrece diversos servicios para mejorar la calidad de vida en el cantón. Aquí podés
+                    encontrar información actualizada sobre ellos.</p>
+            </div>
+
+            <div id="contenedor-servicios" class="cuadricula-servicios">
+                <p class="cargando-datos">Cargando información de servicios...</p>
+            </div>
+
+            <div class="bloque-contacto sombra-morada">
+                <h3>Trámites y Consultas</h3>
+                <p>Horarios de atención en nuestras oficinas:</p>
+                <div class="tabla-ordenada">
+                    <table class="horarios-oficina">
+                        <thead>
+                            <tr>
+                                <th>Días</th>
+                                <th>Horas de Atención</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes a Viernes</td>
+                                <td>8:00 AM - 4:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sábados</td>
+                                <td>8:00 AM - 12:00 MD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECCIÓN DE REPORTE -->
-    <section id="seccionReporte">
+    <section id="seccionReporte" class="aparecer">
         <h2>Reporte de Problema</h2>
 
-        <form id="formReporte">
+        <form id="formularioReporte">
 
             <div>
                 <label for="tipoProblema">Seleccione el tipo de problema</label>
@@ -154,11 +251,51 @@
             </div>
 
             <div>
-                <button type="button" id="btnEnviar">Registrar Reporte</button>
+                <button type="button" id="botonEnviarReporte">Registrar Reporte</button>
             </div>
 
         </form>
     </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <div class="info-municipal">
+                <img src="../../img/logo_municipalidad_escazu_black_outline_thick.png" alt="Logo Municipalidad">
+                <h3>Municipalidad de <span>Escazú</span></h3>
+                <p>Tu gobierno local trabajando para una mejor calidad de vida en el cantón.</p>
+            </div>
+
+            <div class="enlaces-rapidos">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Servicios y Trámites</a></li>
+                    <li><a href="../transparencia.html">Transparencia</a></li>
+                    <li><a href="#">Página Principal</a></li>
+                </ul>
+            </div>
+
+            <div class="contacto-footer">
+                <h4>Contacto</h4>
+                <p>📍 Central: 2208-7500</p>
+                <p>📧 info@escazu.go.cr</p>
+                <p>🏢 Av. 2, Calle 2, Escazú Centro.</p>
+            </div>
+
+            <div class="redes-sociales">
+                <h4>Siguenos</h4>
+                <div class="iconos-redes">
+                    <a href="#" class="icono-social">FB</a>
+                    <a href="#" class="icono-social">IG</a>
+                    <a href="#" class="icono-social">X</a>
+                </div>
+            </div>
+        </div>
+        <div class="barra-derechos">
+            <p>&copy; 2026 Municipalidad de Escazú - Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
