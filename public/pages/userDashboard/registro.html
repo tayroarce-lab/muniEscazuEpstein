@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +10,46 @@
 
 <body>
 
-<header>
-    <div id="titulo">
-        <img src="../../img/logo_municipalidad_escazu_black_outline_thick.png" alt="Logo">
-        <h1>Registro</h1>
+    <header>
+        <div id="titulo">
+            <img src="../../img/logo_municipalidad_escazu_black_outline_thick.png" alt="Logo">
+            <h1>Registro</h1>
 
-        <nav>
-            <a href="login.html"><button>Login</button></a>
-        </nav>
-    </div>
-</header>
+            <nav>
+                <a href="login.html"><button>Login</button></a>
+            </nav>
+        </div>
+    </header>
 
-<main id="contenedor-registro">
+    <main id="contenedor-registro">
 
-    <div id="informacion-registro">
+        <div id="informacion-registro">
 
-        <div>
-            <label for="nombre">Nombre Completo:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <div>
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
         </div>
 
-        <div>
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+        <button type="button" id="btnEnviar">Registrarse</button>
 
-        <div>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
+    </main>
 
-    </div>
 
-    <button type="button" id="btnEnviar">Registrarse</button>
 
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script type="module" src="../../js/user/registro.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../../js/user/registro.js"></script>
 </body>
+
 </html>

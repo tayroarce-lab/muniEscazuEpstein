@@ -13,16 +13,16 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
-    background: 
+    background:
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
         url('../../img/iglesia-san-antonio-de-padua-escazc3ba-foto-de-panoramio.jpg');
-   background-size: cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 /* =========================
@@ -33,7 +33,7 @@ header {
     padding: 20px 60px;
     display: flex;
     justify-content: center;
- }
+}
 
 #titulo {
     width: 100%;
@@ -43,13 +43,13 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    margin-left: -5%; 
+    margin-left: -5%;
 }
 
 
 #titulo img {
     width: 200px;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
 #titulo h1 {
@@ -97,6 +97,7 @@ nav button:hover {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -174,5 +175,199 @@ nav button:hover {
     #contenedor-registro {
         margin: 40px 20px;
         padding: 40px 25px;
+    }
+}
+
+/* =========================
+   PIE DE PÁGINA (FOOTER)
+========================= */
+.pie-pagina {
+    background: #1a0033;
+    color: white;
+    padding: 80px 0 20px;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Efecto de luz superior */
+.pie-pagina::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c77dff, transparent);
+}
+
+.contenedor-footer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+/* Info Municipal */
+.info-municipal img {
+    height: 70px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 5px rgba(224, 170, 255, 0.3));
+}
+
+.info-municipal h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.info-municipal h3 span {
+    color: #e0aaff;
+}
+
+.info-municipal p {
+    color: #bfaed6;
+    line-height: 1.8;
+    font-size: 15px;
+    max-width: 300px;
+}
+
+/* Títulos de Columnas */
+.enlaces-rapidos h4,
+.contacto-footer h4,
+.redes-sociales h4 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.enlaces-rapidos h4::after,
+.contacto-footer h4::after,
+.redes-sociales h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    height: 3px;
+    background: linear-gradient(90deg, #7b2cbf, #c77dff);
+    border-radius: 2px;
+}
+
+/* Enlaces Rápidos */
+.enlaces-rapidos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.enlaces-rapidos ul li {
+    margin-bottom: 15px;
+}
+
+.enlaces-rapidos ul li a {
+    color: #bfaed6;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.enlaces-rapidos ul li a:hover {
+    color: white;
+    transform: translateX(8px);
+    text-shadow: 0 0 10px rgba(199, 125, 255, 0.5);
+}
+
+/* Contacto Footer */
+.contacto-footer p {
+    color: #bfaed6;
+    margin-bottom: 18px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Redes Sociales */
+.iconos-redes {
+    display: flex;
+    gap: 15px;
+}
+
+.icono-social {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icono-social:hover {
+    background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+    transform: translateY(-5px) scale(1.1);
+    border-color: #c77dff;
+    box-shadow: 0 10px 20px rgba(123, 44, 191, 0.3);
+}
+
+/* Barra de Derechos */
+.barra-derechos {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 25px;
+    margin-top: 20px;
+}
+
+.barra-derechos p {
+    color: #8a7fb0;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Responsividad Footer */
+@media (max-width: 1200px) {
+    .contenedor-footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-footer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .info-municipal p {
+        margin: 0 auto;
+    }
+
+    .enlaces-rapidos h4::after,
+    .contacto-footer h4::after,
+    .redes-sociales h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contacto-footer p {
+        justify-content: center;
+    }
+
+    .iconos-redes {
+        justify-content: center;
     }
 }

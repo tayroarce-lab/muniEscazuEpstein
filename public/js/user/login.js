@@ -45,7 +45,7 @@ btnEnviar.addEventListener("click", async function() {
                 showConfirmButton: false
             }).then(() => {
                 // Redirigir según el rol
-                if (userFound.role === 'admin') {
+                if (userFound.rol === 'admin') {
                     window.location.href = '../admin-dashboard-html/admin.html';
                 } else {
                     window.location.href = 'index.html';
